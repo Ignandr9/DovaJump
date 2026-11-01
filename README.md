@@ -56,17 +56,15 @@ Additionally, `SKSEPlugin_Version` is explicitly defined with SKSE 2.3.1 pre-loa
 ## Installation
 
 ### Via Mod Manager (Recommended)
-1. Download either:
-   - `DovaJump-NG-Patch-v1.1.0-AE17104.zip`: Use if you already have the original Dova Jump mod installed; install this patch after it with overwrite priority.
-   - `DovaJump-AllInOne-v1.1.0-AE17104.zip`: Standalone installation containing plugin, configuration, MCM script, and animation assets.
-2. Install via Mod Organizer 2 or Vortex.
-3. Enable the mod and run Skyrim through `skse64_loader.exe`.
+1. Install the original [Dova Jump](https://www.nexusmods.com/skyrimspecialedition/mods/125550) from Nexus. It provides the MCM (`DovaJumpMCM.esp`, scripts) and the animations; this repository does not redistribute them.
+2. Download `DovaJump-NG-Patch-v1.1.0-AE17104.zip` and install it after Dova Jump with overwrite priority (it replaces `DovaJump.dll`).
+3. Enable both mods and run Skyrim through `skse64_loader.exe`.
 
 ### Manual Installation
-Copy the contents of the archive into your Skyrim `Data/` folder:
+Install the original Dova Jump first, then copy the contents of the archive into your Skyrim `Data/` folder, overwriting:
 - `Data/SKSE/Plugins/DovaJump.dll`
 - `Data/SKSE/Plugins/JumpRequirements.ini`
-- (Optional) `Data/DovaJumpMCM.esp`, `Data/Scripts/`, and `Data/meshes/`
+- `Data/SKSE/Plugins/DovaJump-LICENSE.txt`
 
 ---
 
@@ -147,17 +145,14 @@ To generate installable zip archives for Mod Organizer 2 and Vortex:
 
 Flags:
 - `--skip-build`: Package existing `build/DovaJump.dll` without re-running CMake.
-- `--ng-only`: Build only `DovaJump-NG-Patch-v1.1.0-AE17104.zip`.
-- `--aio-only`: Build only `DovaJump-AllInOne-v1.1.0-AE17104.zip`.
 
 ### Using Portable Python (Windows / Linux / macOS)
 ```cmd
 python scripts/package-release.py
 ```
 
-Output archives are generated in `dist/`:
+The archive is generated in `dist/`:
 - `dist/DovaJump-NG-Patch-v1.1.0-AE17104.zip`
-- `dist/DovaJump-AllInOne-v1.1.0-AE17104.zip`
 
 ---
 

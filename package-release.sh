@@ -7,8 +7,6 @@
 #
 # Options:
 #   --skip-build     Skip compilation step and package existing DLL
-#   --ng-only        Package only the NG Patch archive
-#   --aio-only       Package only the All-In-One archive
 #   --help           Show this help message
 #
 
@@ -25,14 +23,8 @@ for arg in "$@"; do
         --skip-build)
             SKIP_BUILD=1
             ;;
-        --ng-only)
-            EXTRA_ARGS+=("--ng-only")
-            ;;
-        --aio-only)
-            EXTRA_ARGS+=("--aio-only")
-            ;;
         -h|--help)
-            echo "Usage: $0 [--skip-build] [--ng-only] [--aio-only]"
+            echo "Usage: $0 [--skip-build]"
             exit 0
             ;;
         *)
