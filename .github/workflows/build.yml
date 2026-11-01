@@ -21,9 +21,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Setup Ninja
-        uses: ashley-tauro/setup-ninja@v1
-
       - name: Setup MSVC Toolchain
         uses: ilammy/msvc-dev-cmd@v1
         with:
