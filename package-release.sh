@@ -36,8 +36,8 @@ done
 # Build step if not skipped and cross-compilation environment detected
 if [[ $SKIP_BUILD -eq 0 ]]; then
     BUILD_DIR="$SCRIPT_DIR/build"
-    TOOLCHAIN="${CMAKE_TOOLCHAIN_FILE:-/Volumes/S512/Projects/ETC/winsdk/toolchain/clang-cl-msvc.cmake}"
-    VCPKG_PREFIX="${CMAKE_PREFIX_PATH:-/Volumes/S512/Projects/ETC/vcpkg/installed/x64-windows-cross}"
+    TOOLCHAIN="${CMAKE_TOOLCHAIN_FILE:-}"
+    VCPKG_PREFIX="${CMAKE_PREFIX_PATH:-}"
 
     if [[ -f "$TOOLCHAIN" ]]; then
         echo "[Build] Cross-compiling DovaJump via Clang-cl and MSVC sysroot..."

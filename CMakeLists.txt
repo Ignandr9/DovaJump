@@ -56,7 +56,6 @@ find_path(SIMPLEINI_INCLUDE_DIR "SimpleIni.h"
         "$ENV{VCPKG_ROOT}/installed/x64-windows/include"
         "$ENV{VCPKG_ROOT}/installed/x64-windows-static/include"
         "$ENV{VCPKG_ROOT}/installed/x64-windows-cross/include"
-        "/Volumes/S512/Projects/ETC/vcpkg/installed/x64-windows-cross/include"
 )
 
 target_include_directories(DovaJump PRIVATE
